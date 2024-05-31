@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <!--New connection form-->
+            <div id="form">
+                <form action="/connections" method="POST">
+                    <label for="topic">Topic: </label>
+                    <input type="text" id="topic" name="topic" required>
+
+                    <label for="title">Title: </label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="details">Details: </label>
+                    <input type="text" id="details" name="details" required minLength="10">
+
+                    <label for="where">Where: </label>
+                    <input type="text" id="where" name="where" required>
+
+                    <label for="when">When: </label>
+                    <input type="date" id="when" name="when" required>
+
+                    <label for="start">Start: </label>
+                    <input type="time" id="start" name="start" required>
+
+                    <label for="end">End: </label>
+                    <input type="time" id="end" name="end" required>
+
+                    <label for="image">Image: </label>
+                    <input type="text" id="image" name="image" required>
+
+                    <button class="button" id="formbutton" type="submit" name="submit">Create Connection</button>
+                </form>
+            </div>
+        </main>
+
+        <%- include('../partials/footer.ejs')%>

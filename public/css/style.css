@@ -1,0 +1,197 @@
+/*Styling for header and footer*/
+header {
+    background-color: #171f1f;
+    padding: 10px;
+    margin-top: 1px;
+  }
+
+  footer{
+    background-color: #171f1f;
+    position: absolute;
+    width: 100%;
+  }
+
+/* styling for navigation bar*/
+nav {
+    background-color: #171f1f;
+    padding: 5px;
+    margin-top: 1px;
+  }
+
+  li {
+      display: inline;
+      padding: 14px 15px;
+      color: white;
+  }
+
+  a{
+    color: white;
+  }
+
+  li a {
+    color: white;
+  }
+
+.rightalign{
+      float: right;
+  }
+
+
+/*Styling for body*/  
+body{
+    margin-left: auto;
+    margin-right: auto;
+    background: url("../images/galaxy2.jpg") no-repeat center center fixed; 
+    background-size: cover;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color:white;
+    height: 100%;
+}
+
+html{
+  height: 100%;
+}
+
+
+main{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    min-height: 40%;
+}
+
+/*Index page*/
+
+/*sizing for gif*/
+#indeximg{  
+  width: 300px;
+  height: auto;
+}
+
+
+
+/*Form Page*/
+#form{
+  text-align: left;
+}
+
+/*Styling/spacing for form inputs*/
+input {
+    display: block;
+    margin-left: 25%;
+    margin-right: auto;
+    margin-top: .2cm;
+    margin-bottom: .2cm;
+}
+
+/*Makes text inputs longer*/
+input[type=text]{
+    width: 50%;
+}
+
+/*Border decoration for inputs */
+input, select{
+  background-color: rgb(253, 244, 244);
+  width:300px;
+  border: 2px solid rgb(138, 117, 117);
+}
+
+/*alignment for form labels*/
+label{
+  margin-left: 25%;
+}
+
+/*Increases size of details input*/
+#details{
+  height: 100px;
+}
+
+/*Styling for buttons on site*/
+.button {
+  padding: 15px 24px;
+  border-radius: 8px;
+  width: auto;
+  font-size: 16px;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*centering & spacing for new connection form button*/
+#formbutton{
+  margin-top: 1cm;
+  float: none;
+  display: block;
+}
+
+/*color change if button is highlighted*/
+.button:hover {
+  background-color: #34384e;
+  color: white;
+  
+}
+  
+
+/*Events page*/
+.event{
+  display: block;
+  margin-right: 50%;
+}
+.eventHead{
+  margin-right: 60%;
+}
+
+
+.connectHeading{
+  margin-left: auto;
+  margin-left: 30%;
+  text-align: left;
+  display: block;
+}
+
+
+#updateAndDelete{
+  margin-left: 80%;
+}
+
+/*Connection Page image sizing*/
+#connectImg{
+  padding: 5px;
+  width: 250px;
+}
+
+.success{
+  background: rgba(27, 105, 31, 0.7);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+.error{
+  background: rgba(129, 54, 28, 0.7);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+#welcome{
+  float: right;
+  margin-right: 50px;
+}
+
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  border:1px solid rgb(177, 163, 163);  
+}
+td, th{
+  
+  width: 33%;
+}

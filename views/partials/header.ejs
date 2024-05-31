@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+
+    <body>
+        <header>
+        <nav>
+            <!--User Navigation-->
+            <ul>
+                <li><a href="/"><img src="/images/GameLogo.png" alt='Game Dpad with three buttons'></a></li>
+                <% if(!user){%>
+                    <li class="rightalign"><a href="/user/login">Login</a></li> 
+                    <li class="rightalign"><a href="/user/new">Sign up</a></li> 
+                <%} else {%>
+                    <li class="rightalign"><a href="/connections/new">Start a new Connection</a></li>
+                    <li class="rightalign"><a href="/user/Logout">Logout</a></li>
+                    <li class="rightalign"><a href="/user/profile">Profile</a></li>
+                <%}%>
+            </ul>
+        </nav>
+        </header>
+
+        <nav>
+            <!--Site Navigation-->
+            <ul>
+
+                <li><a href="/connections">Connections</a></li>
+                <% if(user){%>
+                    <p id="welcome">Welcome, <%=user[1] || user.firstName%></p>
+                <%}%>
+            </ul>
+        </nav>
+
+
+        <%if(errorMessages.length > 0){
+            errorMessages.forEach(message=>{%>
+                <div class="error"> <%=message%> </div>
+            <%});
+        }%>
+    
+        <%if(successMessages.length > 0){
+            successMessages.forEach(message=>{%>
+                <div class="success"> <%=message%> </div>
+            <%});
+        }%>

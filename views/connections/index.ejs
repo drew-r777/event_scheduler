@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <%if(connections.length === 0) {%>
+                <p>There are no connections to display.</p>
+            <%} else {%>
+                    <%previousValue = '';%>
+
+                    <% connections.forEach(connection=>{ %>
+
+                       <% if(connection.topic !== previousValue.topic){ %>
+                            <h3 class="eventHead"><%= connection.topic %></h3>
+                        <%}%>
+
+                        <p class="event"><a href="/connections/<%= connection.id %>"><%= connection.title %></a></p>
+
+                        <%previousValue = connection;%>
+
+                    <% }); %>
+                <% } %>
+        </main>
+
+        <%- include('../partials/footer.ejs') %>

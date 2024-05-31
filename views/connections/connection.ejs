@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs')%>
+        <main>
+            <!--Update and delete event buttons-->
+            <% if(user){
+                if(user[0] == connection.host._id){%>
+                    <form id="updateAndDelete" action="connections.html">
+                        <button class="button" type="submit" name="submit" formmethod="GET" formAction="/connections/<%= connection.id%>/edit">Update</button>
+                        <button class="button" type="submit" name="submit" formmethod="POST" formaction="/connections/<%= connection.id%>?_method=DELETE">Delete</button>
+                    </form>
+                <%}
+            }%>
+            
+           
+            
+
+            <!--Event title and image-->
+            <h1 class="connectHeading"><%=connection.title%></h1>
+            <img src="<%=connection.image%>" alt="image for meetup" id="connectImg">
+
+            <!--Event information-->
+            <section class="meetingInfo">
+                <h2 class="connectHeading"> Hosted By: <%=connection.host.firstName + ' ' + connection.host.lastName%> </h2>
+                <p>Date: <%=connection.when%></p>
+                <p>Time: <%=connection.start%> to <%=connection.end%></p>
+                <p>Location: <%=connection.where%></p> 
+            </section>
+
+            <h2 class="connectHeading">Details:</h2>
+            <p><%=connection.details%></p>
+
+        </main>
+        <%- include('../partials/footer.ejs')%>

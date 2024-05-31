@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs')%>
+<main>
+    <h2><%= user.firstName + "'s Connections "%></h2>
+
+    <%if(connections.length){%>
+        <table>
+            <tr>
+                <th>Connection</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        
+        <%connections.forEach(connection =>{%>
+
+                <tr>
+                    <td><a href ='/connections/<%=connection.id%>'><p><%=connection.title%></p></a></td>
+                    <td><p><%=connection.topic%></p></td>
+                    <td>
+                        <form>
+                            <button class="button" type="submit" name="submit" formmethod="GET" formAction="/connections/<%= connection.id%>/edit">Update</button>
+                        <button class="button" type="submit" name="submit" formmethod="POST" formaction="/connections/<%= connection.id%>?_method=DELETE">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            
+        <%});%>
+        
+    </table>
+    <%} else {%>
+        <p>You have not created any connections</p>
+    <%}%>
+</main>
+
+
+<%- include('../partials/footer.ejs')%>

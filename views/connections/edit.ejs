@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs')%>
+<main>
+    <!--New connection form-->
+    <div id="form">
+        <form method="POST" action="/connections/<%= connection.id%>?_method=PUT">
+            <label for="topic">Topic: </label>
+            <input type="text" id="topic" name="topic" value="<%= connection.topic%>" required>
+
+            <label for="title">Title: </label>
+            <input type="text" id="title" name="title" value="<%= connection.title%>" required>
+
+            <label for="details">Details: </label>
+            <input type="text" id="details" name="details" value="<%= connection.details%>" required minLength="10">
+
+            <label for="where">Where: </label>
+            <input type="text" id="where" name="where" value="<%= connection.where%>" required>
+
+            <label for="when">When: </label>
+            <input type="date" id="when" name="when" value="<%= connection.when%>" required>
+
+            <label for="start">Start: </label>
+            <input type="time" id="start" name="start" value="<%= connection.start%>" required>
+
+            <label for="end">End: </label>
+            <input type="time" id="end" name="end" value="<%= connection.end%>" required>
+
+            <label for="image">Image: </label>
+            <input type="text" id="image" name="image" value="<%= connection.image%>" required>
+
+            <button class="button" id="formbutton" type="submit" name="submit">Edit Connection</button>
+        </form>
+    </div>
+</main>
+
+
+<%- include('../partials/footer.ejs')%>
